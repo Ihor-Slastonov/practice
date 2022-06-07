@@ -1,76 +1,23 @@
-li {
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+body {
   text-align: center;
-}
-.lists {
-  list-style: none;
-}
-.list {
-  display: flex;
-}
-.list-item {
-  position: relative;
-
-  max-width: 370px;
-  margin-left: 30px;
-}
-.list-item:first-child {
-  margin: 0;
+  font-family: sans-serif;
 }
 
-.text {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.box {
+  display: inline-block;
+  --r: 90px;
+  width: var(--r);
+  height: var(--r);
+  border-radius: 50%;
+  background: crimson;
+  cursor: pointer;
+/* Измени код под этой строкой */
+transition: .8s all ease;
 
-  padding: 27px 0;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-  background-color: rgba(47, 48, 58, 0.8);
-  
 }
-img {
-  border: none;
-}
-.list-bgn {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
 
-  padding: 27px 0;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-.text-two {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
-.kkk {
-  position: relative;
-  max-width: 370px;
-
+.box:hover {
+  transition: .8s all ease;
+  border-radius: 0;
+  background: slateblue;
 }
