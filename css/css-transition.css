@@ -1,6 +1,7 @@
-body {
-  text-align: center;
-  font-family: sans-serif;
+.section {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box {
@@ -11,13 +12,12 @@ body {
   border-radius: 50%;
   background: crimson;
   cursor: pointer;
-/* Измени код под этой строкой */
-transition: .8s all ease;
 
+  transition: 0.8s all ease;
 }
 
 .box:hover {
-  transition: .8s all ease;
+  transition: 0.8s all ease;
   border-radius: 0;
   background: slateblue;
 }
