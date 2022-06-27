@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <!-- <audio class="au" src="./music/Soul-Of-Water.ogg" autoplay="autoplay" autobuffer="autobuffer"
+        controls="controls"></audio> -->
     <header>
         <a href="./index.html">Назад</a>
     </header>
@@ -27,14 +29,21 @@
                     <div class="form-field">
                         <input class="form-input" type="text" name="user-name" id="user-name" placeholder="." required>
                         <label class="form-label" for="user-name">Login</label>
+                        <span class="input-icon"><svg class="icon" width="50" height="50">
+                                <use href="./images/icons.svg#icon-astro"></use>
+                            </svg></span>
                     </div>
                     <div class="form-field">
-                        <input class="form-input" type="password" name="user-password" id="user-password" placeholder="."
-                            required>
+                        <input class="form-input" type="password" name="user-password" id="user-password"
+                            placeholder="." required>
                         <label class="form-label" for="user-password">Password</label>
+                        <span class="input-icon"><svg class="icon" width="50" height="50">
+                                <use href="./images/icons.svg#icon-ufo"></use>
+                            </svg></span>
                     </div>
-                    <button class="btn" type="submit">Log In</button>
+                    <button class="btn" type="submit">Log In <svg class="icobtn" width="40"><use href="./images/icons.svg#icon-login" ></use></svg></button>
                 </form>
+                <div class="box"></div>
             </div>
 
         </section>

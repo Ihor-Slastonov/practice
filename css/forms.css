@@ -21,6 +21,9 @@ h6,
 p {
   margin: 0;
 }
+.au {
+  opacity: 0.1;
+}
 
 ul {
   padding: 0;
@@ -36,9 +39,23 @@ img {
   width: 1200;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
+/* Animation */
+@keyframes changeBgColor {
+  0% {
+    background-image: var(--light-color);
+  }
 
+  50% {
+    background-image: #1363df;
+  }
+
+  100% {
+    background-image: #06283d;
+  }
+}
+/* ------------------------- */
 .page-title {
   display: block;
   margin-bottom: 50px;
@@ -83,32 +100,32 @@ img {
 }
 .form-input {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 80px;
   font: inherit;
   color: inherit;
   font-size: 24px;
   font-size: 36px;
   outline: transparent;
   background-color: transparent;
-  border: 1px solid #47b5ff;
+  border: 2px solid #47b5ff;
   border-radius: 10px;
   background-color: #1363df;
   box-shadow: 0px 0px 20px 1px rgba(149, 250, 250, 0.71) inset;
-  transition: background-color 500ms linear;
+  transition: background-color 250ms linear;
 
   /* border-bottom: 1px solid #47b5ff; */
 }
 .form-label {
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 80px;
   transform: translateY(-50%);
-  transition: transform 500ms linear, color 500ms linear;
+  transition: transform 250ms linear, color 250ms linear;
 
   color: var(--dark-color);
   font-size: 36px;
 }
-.form-input::placeholder{
+.form-input::placeholder {
   opacity: 0;
 }
 .form-input:focus {
@@ -120,11 +137,25 @@ img {
   transform: translateY(-180%);
   color: var(--light-color);
 }
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.icon {
+  fill: var(--dark-color);
+  transition: fill 250ms linear;
+}
+.form-input:focus + .form-label + .input-icon > .icon {
+  fill: #47b5ff;
+}
 .btn {
   display: block;
+  position: relative;
   font: inherit;
   font-size: 36px;
-  width: 200px;
+  min-width: 200px;
   height: 60px;
   margin: 0 auto;
 
@@ -133,10 +164,38 @@ img {
   border: 1px solid var(--light-color);
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 500ms linear, color 500ms linear;
+  transition: background-color 250ms linear, color 500ms linear;
 }
 .btn:hover,
 .btn:focus {
   background-color: #06283d;
   color: #47b5ff;
+}
+.icobtn {
+  position: absolute;
+  top: 0;
+  transform: translate(60%, -58%) rotate(50deg);
+  fill: transparent;
+  transition: fill 250ms linear;
+}
+.btn:hover .icobtn,
+.btn:focus .icobtn {
+  fill: var(--light-color);
+}
+/* animation */
+@keyframes changeBgColor {
+  0% {
+    background-image: linear-gradient(90deg, #1363df 0%, #06283d 80%);
+  }
+  25% {
+    background-image: linear-gradient(90deg, #1363df 0%, #06283d 60%);
+  }
+
+  50% {
+    background-image: linear-gradient(90deg, #1363df 0%, #06283d 40%);
+  }
+
+  100% {
+    background-image: linear-gradient(90deg, #1363df 0%, #06283d 0%);
+  }
 }
