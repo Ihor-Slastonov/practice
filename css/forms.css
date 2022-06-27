@@ -10,8 +10,6 @@ body {
   background: url(../images/space.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1,
@@ -50,13 +48,22 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: transparent;
-  background-clip: text;
   background-image: radial-gradient(
     circle farthest-corner at center center,
     #1363df 40%,
     #06283d 90%
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Mozilla */
+  /* color: transparent;
+  background-clip: text;
+  background-image: radial-gradient(
+    circle farthest-corner at center center,
+    #1363df 40%,
+    #06283d 90%
+  ); */
+
   text-shadow: 9px 1px 4px rgba(255, 255, 255, 0.1);
 }
 .form {
@@ -99,8 +106,10 @@ img {
   transition: transform 500ms linear, color 500ms linear;
 
   color: var(--dark-color);
-  font-weight: bold;
   font-size: 36px;
+}
+.form-input::placeholder{
+  opacity: 0;
 }
 .form-input:focus {
   background-color: var(--dark-color);
@@ -115,7 +124,6 @@ img {
   display: block;
   font: inherit;
   font-size: 36px;
-  font-weight: bold;
   width: 200px;
   height: 60px;
   margin: 0 auto;
