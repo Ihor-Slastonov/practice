@@ -41,16 +41,23 @@ img {
   margin: 0 auto;
   /* outline: 1px solid tomato; */
 }
-
-.icon-back {
-  margin-left: 20px;
-  fill: var(--middle-color);
-  transition: all 250ms linear;
+.back-link {
+  display: block;
+  width: 120px;
+  height: 120px;
+  padding: 30px;
 }
-.icon-back:hover {
+.icon-back {
+  top: 50%;
+
+  fill: var(--middle-color);
+  transition: fill 25ms linear, transform 250ms linear;
+  transform: rotate(-120deg) translate(50%);
+}
+.back-link:hover .icon-back {
   fill: #47b5ff;
   transform: scale(2);
-
+  transition: transform 250ms linear;
 }
 /* Animation */
 @keyframes dsa {
