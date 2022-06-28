@@ -22,7 +22,7 @@ p {
   margin: 0;
 }
 .au {
-  opacity: 0;
+  opacity: 0.1;
 }
 
 ul {
@@ -41,8 +41,19 @@ img {
   margin: 0 auto;
   /* outline: 1px solid tomato; */
 }
+
+.icon-back {
+  margin-left: 20px;
+  fill: var(--middle-color);
+  transition: all 250ms linear;
+}
+.icon-back:hover {
+  fill: #47b5ff;
+  transform: scale(2);
+
+}
 /* Animation */
-@keyframes changeBgColor {
+@keyframes dsa {
   0% {
     background-image: var(--light-color);
   }
@@ -165,11 +176,13 @@ img {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 250ms linear, color 500ms linear;
+  outline: transparent;
 }
 .btn:hover,
 .btn:focus {
   background-color: #06283d;
   color: #47b5ff;
+  outline: transparent;
 }
 .icobtn {
   position: absolute;
@@ -183,19 +196,34 @@ img {
   fill: var(--light-color);
 }
 /* animation */
-@keyframes changeBgColor {
+/* @keyframes changeBgColor {
   0% {
-    background-image: linear-gradient(90deg, #1363df 0%, #06283d 80%);
+    background: linear-gradient(90deg, #1363df 0%, #06283d 90%);
   }
   25% {
-    background-image: linear-gradient(90deg, #1363df 0%, #06283d 60%);
+    background: linear-gradient(90deg, #1363df 0%, #06283d 70%);
   }
 
   50% {
-    background-image: linear-gradient(90deg, #1363df 0%, #06283d 40%);
+    background: linear-gradient(90deg, #1363df 0%, #06283d 50%);
+  }
+  75% {
+    background: linear-gradient(90deg, #1363df 0%, #06283d 30%);
   }
 
   100% {
-    background-image: linear-gradient(90deg, #1363df 0%, #06283d 0%);
+    background: linear-gradient(90deg, #1363df 0%, #06283d 10%);
   }
 }
+.box {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+
+  animation-name: changeBgColor;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */
