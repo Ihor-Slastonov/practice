@@ -1,0 +1,18 @@
+.back-link {
+  display: block;
+  width: 120px;
+  height: 120px;
+  padding: 30px;
+}
+.icon-back {
+  top: 50%;
+
+  fill: var(--middle-color);
+  transition: fill 25ms linear, transform 250ms linear;
+  transform: rotate(-120deg) translate(50%);
+  .back-link:hover & {
+    fill: #47b5ff;
+    transform: scale(2);
+    transition: transform 250ms linear;
+  }
+}

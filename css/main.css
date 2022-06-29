@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   color: var(--light-color);
   background: url(../images/space.jpg);
   background-size: cover;
@@ -21,6 +21,7 @@ h6,
 p {
   margin: 0;
 }
+
 .au {
   opacity: 0.1;
 }
@@ -41,39 +42,43 @@ img {
   margin: 0 auto;
   /* outline: 1px solid tomato; */
 }
+
 .back-link {
   display: block;
   width: 120px;
   height: 120px;
   padding: 30px;
 }
+
 .icon-back {
   top: 50%;
-
   fill: var(--middle-color);
+  -webkit-transition: fill 25ms linear, -webkit-transform 250ms linear;
+  transition: fill 25ms linear, -webkit-transform 250ms linear;
   transition: fill 25ms linear, transform 250ms linear;
-  transform: rotate(-120deg) translate(50%);
+  transition: fill 25ms linear, transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transform: rotate(-120deg) translate(50%);
+          transform: rotate(-120deg) translate(50%);
 }
 .back-link:hover .icon-back {
   fill: #47b5ff;
-  transform: scale(2);
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
   transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
-/* ------------------------- */
+
 .page-title {
   display: block;
   margin-bottom: 50px;
-
   font-size: 136px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background-image: radial-gradient(
-    circle farthest-corner at center center,
-    #1363df 40%,
-    #06283d 90%
-  );
+  background-image: radial-gradient(circle farthest-corner at center center, #1363df 40%, #06283d 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -85,9 +90,9 @@ img {
     #1363df 40%,
     #06283d 90%
   ); */
-
   text-shadow: 9px 1px 4px rgba(255, 255, 255, 0.1);
 }
+
 .form {
   display: block;
   padding: 60px 40px 50px;
@@ -96,13 +101,15 @@ img {
   background-color: rgba(22, 22, 22, 0.363);
   border-radius: 10px;
   border: 2px solid #47b5ff;
-  box-shadow: 0px 0px 71px 2px rgba(149, 250, 250, 0.71),
-    0px 0px 20px 5px rgba(149, 250, 250, 0.71) inset;
+  -webkit-box-shadow: 0px 0px 71px 2px rgba(149, 250, 250, 0.71), 0px 0px 20px 5px rgba(149, 250, 250, 0.71) inset;
+          box-shadow: 0px 0px 71px 2px rgba(149, 250, 250, 0.71), 0px 0px 20px 5px rgba(149, 250, 250, 0.71) inset;
 }
+
 .form-field {
   position: relative;
   margin-bottom: 50px;
 }
+
 .form-input {
   width: 100%;
   padding: 10px 20px 10px 80px;
@@ -115,20 +122,23 @@ img {
   border: 2px solid #47b5ff;
   border-radius: 10px;
   background-color: #1363df;
-  box-shadow: 0px 0px 20px 1px rgba(149, 250, 250, 0.71) inset;
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(149, 250, 250, 0.71) inset;
+          box-shadow: 0px 0px 20px 1px rgba(149, 250, 250, 0.71) inset;
+  -webkit-transition: background-color 250ms linear;
   transition: background-color 250ms linear;
-
   /* border-bottom: 1px solid #47b5ff; */
 }
-.form-label {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  transition: transform 250ms linear, color 250ms linear;
-
-  color: var(--dark-color);
-  font-size: 36px;
+.form-input::-webkit-input-placeholder {
+  opacity: 0;
+}
+.form-input::-moz-placeholder {
+  opacity: 0;
+}
+.form-input:-ms-input-placeholder {
+  opacity: 0;
+}
+.form-input::-ms-input-placeholder {
+  opacity: 0;
 }
 .form-input::placeholder {
   opacity: 0;
@@ -137,24 +147,55 @@ img {
   background-color: var(--dark-color);
 }
 
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: color 250ms linear, -webkit-transform 250ms linear;
+  transition: color 250ms linear, -webkit-transform 250ms linear;
+  transition: transform 250ms linear, color 250ms linear;
+  transition: transform 250ms linear, color 250ms linear, -webkit-transform 250ms linear;
+  color: var(--dark-color);
+  font-size: 36px;
+}
+
+.form-input:not(:-moz-placeholder-shown) + .form-label {
   transform: translateY(-180%);
   color: var(--light-color);
 }
+
+.form-input:not(:-ms-input-placeholder) + .form-label {
+  transform: translateY(-180%);
+  color: var(--light-color);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  -webkit-transform: translateY(-180%);
+          transform: translateY(-180%);
+  color: var(--light-color);
+}
+
 .input-icon {
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 .icon {
   fill: var(--dark-color);
+  -webkit-transition: fill 250ms linear;
   transition: fill 250ms linear;
 }
+
 .form-input:focus + .form-label + .input-icon > .icon {
   fill: #47b5ff;
 }
+
 .btn {
   display: block;
   position: relative;
@@ -163,61 +204,30 @@ img {
   min-width: 200px;
   height: 60px;
   margin: 0 auto;
-
   color: var(--dark-color);
   background-color: var(--middle-color);
   border: 1px solid var(--light-color);
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: background-color 250ms linear, color 500ms linear;
   transition: background-color 250ms linear, color 500ms linear;
   outline: transparent;
 }
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background-color: #06283d;
   color: #47b5ff;
   outline: transparent;
 }
+
 .icobtn {
   position: absolute;
   top: 0;
-  transform: translate(60%, -58%) rotate(50deg);
+  -webkit-transform: translate(60%, -58%) rotate(50deg);
+          transform: translate(60%, -58%) rotate(50deg);
   fill: transparent;
+  -webkit-transition: fill 250ms linear;
   transition: fill 250ms linear;
 }
-.btn:hover .icobtn,
-.btn:focus .icobtn {
+.btn:hover .icobtn, .btn:focus .icobtn {
   fill: var(--light-color);
-}
-/* animation */
-/* @keyframes changeBgColor {
-  0% {
-    background: linear-gradient(90deg, #1363df 0%, #06283d 90%);
-  }
-  25% {
-    background: linear-gradient(90deg, #1363df 0%, #06283d 70%);
-  }
-
-  50% {
-    background: linear-gradient(90deg, #1363df 0%, #06283d 50%);
-  }
-  75% {
-    background: linear-gradient(90deg, #1363df 0%, #06283d 30%);
-  }
-
-  100% {
-    background: linear-gradient(90deg, #1363df 0%, #06283d 10%);
-  }
-}
-.box {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-
-  animation-name: changeBgColor;
-  animation-duration: 1000ms;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-} */
+}/*# sourceMappingURL=main.css.map */
