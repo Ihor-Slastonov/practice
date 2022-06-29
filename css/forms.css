@@ -88,6 +88,7 @@ img {
     #1363df 40%,
     #06283d 90%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* For Mozilla */
