@@ -1,83 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
-  </head>
 
-  <body>
-    <audio
-      class="au"
-      src="./audio/compress.ogg"
-      autoplay="autoplay"
-      autobuffer="autobuffer"
-      controls="controls" 
-    ></audio>
-    <header>
-      <a class="back-link" href="./index.html"
-        ><svg class="icon-back" width="30" height="30">
-          <use href="./images/icons.svg#icon-earth"></use></svg
-      ></a>
-    </header>
-    <main class="main">
-      <section class="section">
-        <div class="content">
-          <h1 class="page-title">Galaxy "CHOS" form</h1>
-          <form class="form" autocomplete="off">
-            <!-- <p>Welcome</p> -->
-            <div class="form-field">
-              <input
-                class="form-input"
-                type="text"
-                name="user-name"
-                id="user-name"
-                placeholder="."
-                required
-              />
-              <label class="form-label" for="user-name">Login</label>
-              <span class="input-icon"
-                ><svg class="icon" width="50" height="50">
-                  <use href="./images/icons.svg#icon-astro"></use></svg
-              ></span>
-            </div>
-            <div class="form-field">
-              <input
-                class="form-input"
-                type="password"
-                name="user-password"
-                id="user-password"
-                placeholder="."
-                required
-              />
-              <label class="form-label" for="user-password">Password</label>
-              <span class="input-icon"
-                ><svg class="icon" width="50" height="50">
-                  <use href="./images/icons.svg#icon-ufo"></use></svg
-              ></span>
-            </div>
-            <button class="btn" type="submit">
-              Log In
-              <svg class="icobtn" width="40">
-                <use href="./images/icons.svg#icon-login"></use>
-              </svg>
-            </button>
-          </form>
-          <!-- <div class="box"></div> -->
-        </div>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="./css/main.min.css" />
+</head>
+
+<body>
+  <!-- <audio class="au" src="./audio/compress.ogg" autoplay="autoplay" autobuffer="autobuffer" controls="controls"></audio> -->
+  <header>
+    <a class="back-link" href="./index.html"><svg class="icon-back" width="30" height="30">
+        <use href="./images/icons.svg#icon-earth"></use>
+      </svg></a>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="content">
+        <h1 class="page-title">Galaxy "CHOS" form</h1>
+        <form class="form" autocomplete="off">
+          <!-- <p>Welcome</p> -->
+          <div class="form-field">
+            <input class="form-input" type="text" name="user-name" id="user-name" placeholder="." required />
+            <label class="form-label" for="user-name">Login</label>
+            <span class="input-icon"><svg class="icon" width="50" height="50">
+                <use href="./images/icons.svg#icon-astro"></use>
+              </svg></span>
+          </div>
+          <div class="form-field">
+            <input class="form-input" type="password" name="user-password" id="user-password" placeholder="."
+              required />
+            <label class="form-label" for="user-password">Password</label>
+            <span class="input-icon"><svg class="icon" width="50" height="50">
+                <use href="./images/icons.svg#icon-ufo"></use>
+              </svg></span>
+          </div>
+          <button class="btn" type="submit">
+            Log In
+            <svg class="icobtn" width="40">
+              <use href="./images/icons.svg#icon-login"></use>
+            </svg>
+          </button>
+        </form>
+        <!-- <div class="box"></div> -->
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
