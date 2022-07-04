@@ -1,0 +1,27 @@
+@keyframes fly {
+    0% {
+        top:0;
+        left: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        left: 5%;
+        opacity: 0;
+    }
+//   0% {
+//     top: 0;
+//     left: 0;
+//   }
+//   30% {
+//     top: 50px;
+//   }
+//   68%,
+//   72% {
+//     left: 50px;
+//   }
+//   100% {
+//     top: 100px;
+//     left: 100%;
+//   }
+}

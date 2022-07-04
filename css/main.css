@@ -43,6 +43,31 @@ img {
   /* outline: 1px solid tomato; */
 }
 
+@-webkit-keyframes fly {
+  0% {
+    top: 0;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    left: 5%;
+    opacity: 0;
+  }
+}
+
+@keyframes fly {
+  0% {
+    top: 0;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    left: 5%;
+    opacity: 0;
+  }
+}
 .back-link {
   display: block;
   width: 120px;
@@ -71,6 +96,7 @@ img {
 }
 
 .page-title {
+  position: relative;
   display: block;
   margin-bottom: 50px;
   font-size: 136px;
@@ -84,13 +110,20 @@ img {
   -webkit-text-fill-color: transparent;
   /* For Mozilla */
   /* color: transparent;
-  background-clip: text;
-  background-image: radial-gradient(
-    circle farthest-corner at center center,
-    #1363df 40%,
-    #06283d 90%
-  ); */
+    background-clip: text;
+    background-image: radial-gradient(
+      circle farthest-corner at center center,
+      #1363df 40%,
+      #06283d 90%
+    ); */
   text-shadow: 9px 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+.comet {
+  position: absolute;
+  fill: var(--light-color);
+  -webkit-animation: fly 3s linear 0s infinite normal none;
+          animation: fly 3s linear 0s infinite normal none;
 }
 
 .form {

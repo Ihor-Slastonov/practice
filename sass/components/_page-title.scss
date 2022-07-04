@@ -1,28 +1,34 @@
 .page-title {
-    display: block;
-    margin-bottom: 50px;
-  
-    font-size: 136px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background-image: radial-gradient(
-      circle farthest-corner at center center,
-      #1363df 40%,
-      #06283d 90%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* For Mozilla */
-    /* color: transparent;
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+
+  font-size: 136px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-image: radial-gradient(
+    circle farthest-corner at center center,
+    #1363df 40%,
+    #06283d 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Mozilla */
+  /* color: transparent;
     background-clip: text;
     background-image: radial-gradient(
       circle farthest-corner at center center,
       #1363df 40%,
       #06283d 90%
     ); */
-  
-    text-shadow: 9px 1px 4px rgba(255, 255, 255, 0.1);
-  }
+
+  text-shadow: 9px 1px 4px rgba(255, 255, 255, 0.1);
+}
+.comet {
+  position: absolute;
+  fill: var(--light-color);
+  animation: fly 3s linear 0s infinite normal none;
+}
