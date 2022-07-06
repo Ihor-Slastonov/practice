@@ -43,6 +43,7 @@
 }
 .comet {
   position: absolute;
+  opacity: 0;
   fill: var(--light-color);
   animation: fly 3s linear 0s infinite normal none;
 }

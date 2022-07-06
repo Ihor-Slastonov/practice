@@ -187,6 +187,7 @@ img {
 
 .comet {
   position: absolute;
+  opacity: 0;
   fill: var(--light-color);
   -webkit-animation: fly 3s linear 0s infinite normal none;
           animation: fly 3s linear 0s infinite normal none;
